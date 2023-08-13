@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    color: white;
+    background-color: #202731;
+    overflow-x: hidden;
+}
+
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+}
+
+.blue{
+    background-color: #3c31dd;
+}
+
+.red{ background-color: #dd3f31;}
+
+.pink{ background-color: #ff5efa;}
+
+.dark{ background-color: #0f0f10;}
+
+.purple{ background-color: #ff00f6;}
+
+.curve{
+    position: absolute;
+    height: 225px;
+    width: 100%;
+    bottom: 0;
+}
+
+.curve::before, .curve::after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+}
+
+.curve::before{ 
+    background-color: #202731;
+    transform: translate(85%, 60%);
+}
+
+.curve::after{
+    background-color: #3c31dd;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
+.bubble{
+    margin-top: 5vh;
+}
+.bubble::after{
+    content: '';
+    border-top-left-radius: 100% 50% ;
+    border-top-right-radius: 100% 50% ;
+    position: absolute;
+    bottom: 0;
+    height: 85%;
+    width: 100%;
+    background-color: #0f0f10;
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(119% + 1.3px);
+    height: 124px;
+}
+
+.wave .shape-fill {
+    fill: #FFFFFF;
+}
+
+.spacer{
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wavy{
+    position: relative;   
+    background-image: url('./public/stacked-waves-haikei.svg');
+}
+
+.spacer h1{
+    position: absolute;
+    top: 40%;
+}
+
+.spacer p{
+    
+    position: absolute;
+    top: 50%;
+}
+
+.flip{
+    transform: rotate(180deg);
+}
+
+.blob-motion {
+    position: absolute;
+    transform: translateY(12%);
+}
+
